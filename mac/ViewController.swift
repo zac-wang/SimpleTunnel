@@ -47,9 +47,9 @@ class ViewController: NSViewController {
         //config.providerConfiguration = ["App": bId,"PluginType":"com.yarshure.Surf"]
         #if os(iOS)
             
-            config.providerBundleIdentifier = "com.yarshure.Surf.PacketTunnel"
+            config.providerBundleIdentifier = "com.wzc.zcvpn.PacketTunnel"
         #else
-            config.providerBundleIdentifier = "com.yarshure.Surf.mac.extension"
+            config.providerBundleIdentifier = "com.wzc.ZCMacVPN.extension"
         #endif
         config.serverAddress = "192.168.11.9:8890"
         
