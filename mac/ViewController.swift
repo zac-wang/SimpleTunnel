@@ -49,7 +49,7 @@ class ViewController: NSViewController {
             
             config.providerBundleIdentifier = "com.wzc.zcvpn.PacketTunnel"
         #else
-            config.providerBundleIdentifier = "com.wzc.ZCMacVPN.extension"
+            config.providerBundleIdentifier = "com.wzc.ZCMacVPN.PacketTunnel"
         #endif
         config.serverAddress = "192.168.11.9:8890"
         
@@ -116,20 +116,20 @@ class ViewController: NSViewController {
                             if let responseString = String.init(data:response , encoding: .utf8){
                                 _ = responseString.components(separatedBy: ":")
                                 
-                                print("Received response from the provider: \(responseString)")
+                                print("收到来自提供程序的响应: \(responseString)")
                             }
                             
                             //self.registerStatus()
                         } else {
-                            print("Got a nil response from the provider")
+                            print("从提供程序得到零响应")
                         }
                     }
                 } catch {
-                    print("Failed to send a message to the provider")
+                    print("无法向提供程序发送消息")
                 }
             }
         }else {
-            print("message dont init")
+            print("消息不初始化")
         }
         
     }
